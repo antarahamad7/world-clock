@@ -8,7 +8,7 @@ setInterval(() => {
     time = new Date();
     let local = time.toLocaleString();
     document.getElementById("m1").innerHTML = (local.slice(10, 21));
-    document.getElementById("m2").innerHTML = (local.slice(0,8));
+    document.getElementById("m2").innerHTML = (local.slice(0,9));
 
     time = new Date();
     let london = time.toLocaleString('en-GB', { timeZone: 'Europe/London' });
