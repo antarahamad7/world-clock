@@ -7,7 +7,7 @@ const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric
 setInterval(() => {
     time = new Date();
     let local = time.toLocaleString();
-    document.getElementById("m1").innerHTML = (local.slice(10, 21));
+    document.getElementById("m1").innerHTML = (local.slice(10, 22));
     document.getElementById("m2").innerHTML = (local.slice(0,9));
 
     time = new Date();
