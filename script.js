@@ -3,12 +3,19 @@ let time;
 let date;
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
+function handleTimeZoneChange(selectElement) {
+    const selectedValue = selectElement.value;
+    if (selectedValue !== "default") {
+        // Call the corresponding function
+        window[selectedValue]();
+    }
+}
 
 setInterval(() => {
     time = new Date();
     let local = time.toLocaleString();
     document.getElementById("m1").innerHTML = (local.slice(10, 22));
-    document.getElementById("m2").innerHTML = (local.slice(0,8));
+    document.getElementById("m2").innerHTML = (local.slice(0,10));
 
     time = new Date();
     let london = time.toLocaleString('en-GB', { timeZone: 'Europe/London' });
@@ -33,12 +40,8 @@ setInterval(() => {
     document.getElementById("rome").innerHTML = (rome.slice(12, 20));
     let sydney = time.toLocaleString('en-GB', { timeZone: 'Australia/Sydney' });
     document.getElementById("sydney").innerHTML = (sydney.slice(12, 20));
-
     let muscat = time.toLocaleString('en-GB', { timeZone: 'Asia/muscat' });
     document.getElementById("muscat").innerHTML = (muscat.slice(12, 20));
-
-
-
 
 }, 1000);
 
@@ -262,3 +265,7 @@ function utc_11(){
     window.alert("Current time in UTC:-11:00 is : "+currentTime.slice(12, 20));
 
 }
+
+
+
+
