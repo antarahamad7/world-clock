@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+
+.navbar {
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    background-color: rgb(116, 236, 252);
+}
+
+.main {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.clock-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.city-box {
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.city-box h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+
+
+.time-info {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.brand {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.timezone-selector {
+    display: block;
+    width: 40%;
+    height: 100%;
+
+}
+
+.timezone-dropdown {
+    display: none;
+}
+
+.timezone-dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgb(116, 236, 252);
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    flex-direction: column;
+    width: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.tttt {
+    position: relative;
+    display: inline-block;
+}
+
+.tttt:hover .timezone-dropdown {
+    display: flex;
+
+}
+
+.timezone-dropdown li {
+
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.timezone-dropdown li:hover {
+    background-color: #db3434;
+}
+
+
+.btn {
+    width: 80%;
+    height: 20%;
+    background-color: rgb(70, 255, 230);
+    border: none;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.btn:hover .timezone-dropdown {
+    background-color: rgb(255, 0, 0);
+    display: flex;
+}
+
+.border {
+    border: 0.5px solid #803f3f;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-row {
+    display: flex;
+}
+
+select {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(126, 235, 235);
+
+}
+
+.blue {
+    background-color: rgb(60, 60, 241);
+    color: rgb(253, 247, 247);
+}
+
+.red {
+    background-color: rgb(255, 9, 9);
+    color: rgb(7, 6, 6);
+}
+
+.green {
+    background-color: rgb(9, 255, 29);
+    color: rgb(12, 10, 10);
+}
+
+.yellow {
+    background-color: rgb(255, 255, 9);
+    color: rgb(0, 0, 0);
+}
+
+.purple {
+    background-color: rgb(131, 0, 87);
+    color: rgb(8, 8, 8);
+}
+
+.aqua {
+    background-color: rgb(4, 94, 64);
+    color: rgb(248, 228, 228);
+}
+
+.orange {
+    background-color: rgb(255, 127, 0);
+    color: rgb(0, 0, 0);
+}
+
+.maroon {
+    background-color: rgb(128, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.gray {
+    background-color: rgb(128, 128, 128);
+    color: rgb(15, 15, 15);
+}
+
+.navy {
+    background-color: rgb(0, 0, 128);
+    color: rgb(255, 255, 255);
+}
+
+.lavder {
+    background-color: rgb(230, 230, 250);
+    color: rgb(0, 0, 0);
+}
+
+.brown {
+    background-color: rgb(165, 42, 42);
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 778px) {
+    .clock-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        width: 100vw;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .city-box {
+        width: 80%;
+    }
+
+    .timezone-selector {
+        width: 100%;
+    }
+
+    .time-info {
+        width: 100%;
+        flex-direction: column;
+    }
+    .btn{
+        width: 100%;
+    }
+}
